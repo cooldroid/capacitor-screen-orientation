@@ -48,7 +48,7 @@ export class ScreenOrientationWeb
         return { type: OrientationType.LANDSCAPE_SECONDARY };
       case 'portrait-secondary':
         return { type: OrientationType.PORTRAIT_SECONDARY };
-      default:
+      case 'portrait-primary':
         return { type: OrientationType.PORTRAIT_PRIMARY };
     }
   }

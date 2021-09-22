@@ -74,6 +74,8 @@ public class ScreenOrientation {
     public String getCurrentOrientationType() {
         int rotation = bridge.getActivity().getWindowManager().getDefaultDisplay().getRotation();
         switch (rotation) {
+            case Surface.ROTATION_0:
+                return ScreenOrientationType.PORTRAIT_PRIMARY;
             case Surface.ROTATION_90:
                 return ScreenOrientationType.LANDSCAPE_PRIMARY;
             case Surface.ROTATION_180:
@@ -81,7 +83,7 @@ public class ScreenOrientation {
             case Surface.ROTATION_270:
                 return ScreenOrientationType.LANDSCAPE_SECONDARY;
             default:
-                return ScreenOrientationType.PORTRAIT_PRIMARY;
+                return "unspecified";
         }
     }
 }

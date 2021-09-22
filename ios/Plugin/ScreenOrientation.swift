@@ -86,7 +86,7 @@ import UIKit
         case UIInterfaceOrientation.portraitUpsideDown.rawValue:
             return "portrait-secondary"
         default:
-            return "portrait-primary"
+            return "unspecified"
         }
     }
 }
